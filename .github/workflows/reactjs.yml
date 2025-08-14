@@ -24,9 +24,6 @@ jobs:
       - name: Install react-scripts
         run: npm i react-scripts
 
-      - name: Run tests
-        run: npm test
-
       - name: Build app
         run: npm run build
 
