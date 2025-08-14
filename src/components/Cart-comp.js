@@ -12,14 +12,14 @@ export const CartItem = (props) => {
     useEffect(() => {
         if(Array.isArray(cart) && cart.length){   
             if(item !== undefined){
-                const exist = cart.filter(({ product }, unit) => product._id == _id);
+                const exist = cart.filter(({ product }, unit) => product._id === _id);
                 if(exist.length){
                     setCurrentUnit(exist[0].unit)
                 }
             }
         }
 
-    },[cart])
+    },[cart, _id, item])
      
     const addCart = () => {
 

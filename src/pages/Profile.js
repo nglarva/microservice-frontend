@@ -34,7 +34,7 @@ const Profile = () => {
     if (token) {
       dispatch(onViewProfile());
     }
-  }, [token]);
+  }, [token, dispatch]);
 
   const onAdd = ({ _id, qty }) => {
     console.log(_id, qty);
