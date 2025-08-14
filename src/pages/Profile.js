@@ -55,7 +55,6 @@ const Profile = () => {
       return (
         <div>
           {cart.map((item) => {
-            if (item) {
               return (
                 <CartItem
                   cart={cart}
@@ -64,7 +63,6 @@ const Profile = () => {
                   onRemove={onRemove}
                 />
               );
-            }
           })}
         </div>
       );
@@ -132,7 +130,7 @@ const Profile = () => {
       let totalAmount = 0;
 
       cart.map(({ unit, product }) => {
-        totalAmount += unit * product.price;
+         return totalAmount += unit * product.price;
       });
 
       return (
