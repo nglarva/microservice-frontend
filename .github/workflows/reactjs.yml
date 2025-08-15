@@ -2,9 +2,17 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - dev
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - dev
+env:
+  NODE_VERSION: 20
+  DOCKER_IMAGE: ghcr.io/nglarva/shopping
+  DOCKER_TAG: ${{ github.sha}}
 
 jobs:
   build-and-test:
